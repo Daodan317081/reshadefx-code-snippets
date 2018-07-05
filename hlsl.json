@@ -1,125 +1,170 @@
 {
-	"Uniform Drag": {
-		"prefix": "uniform-drag",
+	"uniform float": {
+		"prefix": "uniform float",
 		"body": [
-			"uniform $1 $2<",
+			"uniform float ${2:name}<",
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
-			"\tui_min = $6; ui_max = $7;",
-			"\tui_step = $8;",
-			" > = $9;",
+			"\tui_min = ${6:0.0}; ui_max = ${7:1.0};",
+			"\tui_step = ${8:0.01};",
+			"> = ${9:1.0};",
 			"$0"
 		],
-		"description": "uniform with drag control"
+		"description": "float uniform with drag control"
 	},
 
-	"Uniform Drag and Constructor": {
-			"prefix": "uniform-drag-with-type-constructor",
-			"body": [
-				"uniform $1 $2<",
-				"\tui_type = \"drag\";",
-				"\t${3:ui_category = \"$4\";}",
-				"\tui_label = \"$5\";",
-				"\tui_min = $6; ui_max = $7;",
-				"\tui_step = $8;",
-				"> = $1($10);",
-				"$0"
-			],
-			"description": "uniform with type-constructor and drag control"
-	},
-
-	"Uniform Combo": {
-		"prefix": "uniform-combo",
+	"uniform int": {
+		"prefix": "uniform int",
 		"body": [
-			"uniform int $1<",
+			"uniform int ${2:name}<",
+			"\tui_type = \"drag\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\tui_min = ${6:0}; ui_max = ${7:1};",
+			"\tui_step = ${8:1};",
+			"> = ${9:1};",
+			"$0"
+		],
+		"description": "integer uniform with drag control"
+	},
+
+	"uniform float2": {
+		"prefix": "uniform float2",
+		"body": [
+			"uniform float2 ${2:name}<",
+			"\tui_type = \"drag\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\tui_min = ${6:0.0}; ui_max = ${7:1.0};",
+			"\tui_step = ${8:0.01};",
+			"> = float2(${9:1.0}, ${10:1.0});",
+			"$0"
+		],
+		"description": "float2 uniform with drag control"
+	},
+
+	"uniform float3": {
+		"prefix": "uniform float3",
+		"body": [
+			"uniform float3 ${2:name}<",
+			"\tui_type = \"drag\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\tui_min = ${6:0.0}; ui_max = ${7:1.0};",
+			"\tui_step = ${8:0.01};",
+			"> = float3(${9:1.0}, ${10:1.0}, ${11:1.0});",
+			"$0"
+		],
+		"description": "float3 uniform with drag control"
+	},
+
+	"uniform float3 color": {
+		"prefix": "uniform float3 color",
+		"body": [
+			"uniform float3 ${1:name}<",
+			"\tui_type = \"color\";",
+			"\t${2:ui_category = \"$3\";}",
+			"\tui_label = \"$4\";",
+			"> = float3(${5:1.0}, ${6:1.0}, ${7:1.0});",
+			"$0"
+		],
+		"description": "float3 uniform with color control"
+	},
+
+	"Uniform float4": {
+		"prefix": "uniform float4",
+		"body": [
+			"uniform float4 ${2:name}<",
+			"\tui_type = \"drag\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\tui_min = ${6:0.0}; ui_max = ${7:1.0};",
+			"\tui_step = ${8:0.01};",
+			"> = float4(${9:1.0}, ${10:1.0}, ${11:1.0}, ${12:1.0});",
+			"$0"
+		],
+		"description": "float4 uniform with drag control"
+	},
+
+	"uniform float4 color": {
+		"prefix": "uniform float4 color",
+		"body": [
+			"uniform float4 ${1:name}<",
+			"\tui_type = \"color\";",
+			"\t${2:ui_category = \"$3\";}",
+			"\tui_label = \"$4\";",
+			"> = float4(${5:1.0}, ${6:1.0}, ${7:1.0}, ${8:1.0});",
+			"$0"
+		],
+		"description": "float4 uniform with color control"
+	},
+
+	"uniform combo": {
+		"prefix": "uniform combo",
+		"body": [
+			"uniform int ${1:name}<",
 			"\tui_type = \"combo\";",
 			"\t${2:ui_category = \"$3\";}",
 			"\tui_label = \"$4\";",
-			"\tui_items = \"$5\\0\"",
-			"> = $6;",
+			"\tui_items = \"$5\";",
+			"> = ${6:0};",
 			"$0"
 		],
-		"description": "uniform with combo control"
+		"description": "integer uniform with combo control"
 	},
 
-	"Uniform Bool": {
-		"prefix": "uniform-bool",
+	"uniform bool": {
+		"prefix": "uniform bool",
 		"body": [
-			"uniform bool $1<",
+			"uniform bool ${1:name}<",
 			"\tui_label = \"$2\";",
 			"\t${3:ui_category = \"$4\";}",
-			"> = $5;",
+			"> = ${5|true,false|};",
 			"$0"
 		],
 		"description": "boolean uniform"
 	},
 
-	"Uniform Color RGB": {
-		"prefix": "uniform-color-rgb",
-		"body": [
-			"uniform float3 $1<",
-			"\tui_type = \"color\";",
-			"\t${2:ui_category = \"$3\";}",
-			"\tui_label = \"$4\";",
-			"> = float3($5, $6, $7);",
-			"$0"
-		],
-		"description": "RGB color uniform"
-	},
-
-	"Uniform Color RGBA": {
-		"prefix": "uniform-color-rgba",
-		"body": [
-			"uniform float4 $1<",
-			"\tui_type = \"color\";",
-			"\t${2:ui_category = \"$3\";}",
-			"\tui_label = \"$4\";",
-			"> = float4($5, $6, $7, $8);",
-			"$0"
-		],
-		"description": "RGBA color uniform"
-	},
-
-	"Texture": {
-		"prefix": "texture",
+	"texture2D": {
+		"prefix": "texture2D",
 		"body": [
 			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; MipLevels = ${6:1}, Format = ${7|RGBA8,R8,R16F,R32F,RG8,RG16,RG16F,RG32F,RGBA16,RGBA16F,RGBA32F|}; };",
 			"$0"
 		],
-		"description": "texture"
+		"description": "texture2D"
 	},
 
-	"Sampler": {
-		"prefix": "sampler",
+	"sampler2D": {
+		"prefix": "sampler2D",
 		"body": [
 			"sampler2D ${1:name} { Texture = $2; MipLODBias = ${3:0}};",
 			"$0"
 		],
-		"description": "sampler"
+		"description": "sampler2D"
 	},
 
-	"Texture With Sampler": {
-		"prefix": "texture-with-sampler",
+	"texture2D+sampler2D": {
+		"prefix": "texture2D+sampler2D",
 		"body": [
 			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; MipLevels = ${6:1}, Format = ${7|RGBA8,R8,R16F,R32F,RG8,RG16,RG16F,RG32F,RGBA16,RGBA16F,RGBA32F|}; };",
 			"sampler2D ${8:name} { Texture = $1; MipLODBias = ${9:0}};",
 			"$0"
 		],
-		"description": "texture with sampler"
+		"description": "texture2D and sampler2D"
 	},
 
-	"Pixel Shader": {
+	"pixel-shader": {
 		"prefix": "pixel-shader",
 		"body": [
 			"float3 ${1:name}(float4 vpos : SV_Position, float2 texcoord : TexCoord) : SV_Target {",
 			"\t$0",
 			"}"
 		],
-		"description": "pixel shader"
+		"description": "pixel shader body"
 	},
 
-	"Technique": {
+	"technique": {
 		"prefix": "technique",
 		"body": [
 			"technique ${1:name} {",
@@ -129,7 +174,7 @@
 		"description": "technique"
 	},
 
-	"Pass": {
+	"pass": {
 		"prefix": "pass",
 		"body": [
 			"pass {",
@@ -141,15 +186,15 @@
 		"description": "pass"
 	},
 	
-	"Rendertarget": {
-		"prefix": "rendertarget",
+	"RenderTarget": {
+		"prefix": "RenderTarget",
 		"body": [
 			"RenderTarget$1 = $2;"
 		],
-		"description": "rendertarget"
+		"description": "RenderTarget"
 	},
 
-	"For Loop": {
+	"for": {
 		"prefix": "for",
 		"body": [
 			"for(${1:int} $2; $2 ${3:<} $4; $2${5:++}) {",
@@ -159,7 +204,7 @@
 		"description": "for-loop"
 	},
 	
-	"Nested For Loops": {
+	"for-xy": {
 		"prefix": "for-xy",
 		"body": [
 			"for(${1:int} $2; $2 ${3:<} $4; $2${5:++}) {",
