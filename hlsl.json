@@ -1,0 +1,276 @@
+{
+	// Place your snippets for hlsl here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	// "": {
+	// 	"prefix": "",
+	// 	"body": "$0",
+	// 	"description": ""
+	// },
+
+	///////////////////////////////////////////////////////////////////////////////
+	//	UNIFORM
+	///////////////////////////////////////////////////////////////////////////////
+	"Uniform Drag": {
+		"prefix": "uniform-drag",
+		"body": [
+			"uniform $1 $2<",
+			"\tui_type = \"drag\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\tui_min = $6; ui_max = $7;",
+			"\tui_step = $8;",
+			" > = $9;",
+			"$0"
+		],
+		"description": "uniform with drag control"
+	},
+
+	"Uniform Drag and Constructor": {
+			"prefix": "uniform-drag-with-type-constructor",
+			"body": [
+				"uniform $1 $2<",
+				"\tui_type = \"drag\";",
+				"\t${3:ui_category = \"$4\";}",
+				"\tui_label = \"$5\";",
+				"\tui_min = $6; ui_max = $7;",
+				"\tui_step = $8;",
+				"> = $1($10);",
+				"$0"
+			],
+			"description": "uniform with type-constructor and drag control"
+	},
+
+	"Uniform Combo": {
+		"prefix": "uniform-combo",
+		"body": [
+			"uniform int $1<",
+			"\tui_type = \"combo\";",
+			"\t${2:ui_category = \"$3\";}",
+			"\tui_label = \"$4\";",
+			"\tui_items = \"$5\\0\"",
+			"> = $6;",
+			"$0"
+		],
+		"description": "uniform with combo control"
+	},
+
+	"Uniform Bool": {
+		"prefix": "uniform-bool",
+		"body": [
+			"uniform bool $1<",
+			"\tui_label = \"$2\";",
+			"\t${3:ui_category = \"$4\";}",
+			"> = $5;",
+			"$0"
+		],
+		"description": "boolean uniform"
+	},
+
+	"Uniform Color RGB": {
+		"prefix": "uniform-color-rgb",
+		"body": [
+			"uniform float3 $1<",
+			"\tui_type = \"color\";",
+			"\t${2:ui_category = \"$3\";}",
+			"\tui_label = \"$4\";",
+			"> = float3($5, $6, $7);",
+			"$0"
+		],
+		"description": "RGB color uniform"
+	},
+
+	"Uniform Color RGBA": {
+		"prefix": "uniform-color-rgba",
+		"body": [
+			"uniform float4 $1<",
+			"\tui_type = \"color\";",
+			"\t${2:ui_category = \"$3\";}",
+			"\tui_label = \"$4\";",
+			"> = float4($5, $6, $7, $8);",
+			"$0"
+		],
+		"description": "RGBA color uniform"
+	},
+
+	///////////////////////////////////////////////////////////////////////////////
+	//	TEXTURE / SAMPLER
+	///////////////////////////////////////////////////////////////////////////////
+	"Texture": {
+		"prefix": "texture",
+		"body": [
+			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; Format = $6; };",
+			"$0"
+		],
+		"description": "texture"
+	},
+
+	"Sampler": {
+		"prefix": "sampler",
+		"body": [
+			"sampler2D ${1:name} { Texture = $2; };",
+			"$0"
+		],
+		"description": "sampler"
+	},
+
+	"Texture With Sampler": {
+		"prefix": "texture-with-sampler",
+		"body": [
+			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; Format = $6; };",
+			"sampler2D ${7:name} { Texture = $1; };",
+			"$0"
+		],
+		"description": "texture with sampler"
+	},
+
+	///////////////////////////////////////////////////////////////////////////////
+	//	PIXEL SHADER
+	///////////////////////////////////////////////////////////////////////////////
+	"Pixel Shader": {
+		"prefix": "pixel-shader",
+		"body": [
+			"float3 ${1:name}(float4 vpos : SV_Position, float2 texcoord : TexCoord) : SV_Target {",
+			"\t$0",
+			"}"
+		],
+		"description": "pixel shader"
+	},
+
+	///////////////////////////////////////////////////////////////////////////////
+	//	TECHNIQUE / PASS
+	///////////////////////////////////////////////////////////////////////////////
+	"Technique": {
+		"prefix": "technique",
+		"body": [
+			"technique ${1:name} {",
+			"\t$0",
+			"}"
+		],
+		"description": "technique"
+	},
+
+	"Pass": {
+		"prefix": "pass",
+		"body": [
+			"pass {",
+			"\tVertexShader = PostProcessVS;",
+			"\tPixelShader = $1;",
+			"\t${2:/* RenderTarget = BackBuffer */}",
+			"}\n$0"
+		],
+		"description": "pass"
+	},
+	
+	"Rendertarget": {
+		"prefix": "rendertarget",
+		"body": [
+			"RenderTarget$1 = $2;"
+		],
+		"description": "rendertarget"
+	},
+
+	///////////////////////////////////////////////////////////////////////////////
+	//	FLOW CONTROL
+	///////////////////////////////////////////////////////////////////////////////
+	"For Loop": {
+		"prefix": "for",
+		"body": [
+			"for(${1:int} $2; $2 ${3:<} $4; $2${5:++}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "for-loop"
+	},
+	
+	"Nested For Loops": {
+		"prefix": "for-xy",
+		"body": [
+			"for(${1:int} $2; $2 ${3:<} $4; $2${5:++}) {",
+			"\tfor(${1:int} $6; $6 ${7:<} $8; $6${9:++}) {",
+			"\t\t$0",
+			"\t}",
+			"}"
+		],
+		"description": "nested for-loops"
+	},
+
+	///////////////////////////////////////////////////////////////////////////////
+	//	INTRINSICS (ReShadeFX specific)
+	///////////////////////////////////////////////////////////////////////////////
+
+	"tex2D": {
+		"prefix": "tex2D",
+		"body": "tex2D(${1:sampler2D s}, ${2:float2 coords})${3:.rgb};\n$0",
+		"description": "Samples a 2D texture. <float4>"
+	},
+	
+	"tex2Dlod": {
+		"prefix": "tex2Dlod",
+		"body": "tex2Dlod(${1:sampler2D s}, float4(${2:float2 coords}, 0, ${3:LOD}))${4:.rgb};\n$0",
+		"description": "Samples a 2D texture with mipmaps. <float4>"
+	},
+	
+	"tex2Doffset": {
+		"prefix": "tex2Doffset",
+		"body": "tex2Doffset(${1:sampler2D s}, ${2:float2 coords}, ${3:int2 offset})${4:.rgb};\n$0",
+		"description": "Offsets the texture coordinates before sampling. <float4>"
+	},
+
+	"tex2Dlodoffset": {
+		"prefix": "tex2Dlodoffset",
+		"body": "tex2Dlodoffset(${1:sampler2D s}, float4(${2:float2 coords}, 0, ${3:LOD}), ${4:int2 offset})${5:.rgb};\n$0",
+		"description": "Samples a 2D texture with mipmaps. Offsets the texture coordinates before sampling. <float4>"
+	},
+
+	"tex2Dfetch": {
+		"prefix": "tex2Dfetch",
+		"body": "tex2Dfetch(${1:sampler2D s}, int4(${2:int2 pos}, 0, ${3:int miplevel}))${4:.rgb};\n$0",
+		"description": "Fetches a value from the texture directly without any sampling. <float4>"
+	},
+
+	"tex2Dgather": {
+		"prefix": "tex2Dgather",
+		"body": "tex2Dgather(${1:sampler2D s}, ${2:float2 coords}, ${3:int comp})${4:.rgb};\n$0",
+		"description": "Gathers the specified component of the four neighboring pixels and returns the result. <float4>"
+	},
+
+	"tex2Dgatheroffset": {
+		"prefix": "tex2Dgatheroffset",
+		"body": "tex2Dgatheroffset(${1:sampler2D s}, ${2:float2 coords}, ${3:int2 offset}, ${4:<int comp>})${5:.rgb};\n$0",
+		"description": "Gathers the specified component of the four neighboring pixels and returns the result. Offsets the texture coordinates before sampling. <float4>"
+	},
+
+	"tex2Dsize": {
+		"prefix": "tex2Dsize",
+		"body": "tex2Dsize(${1:sampler2D s}, ${2:int lod});\n$0",
+		"description": "Returns the size of a texture. <int2>"
+	},
+
+	///////////////////////////////////////////////////////////////////////////////
+	//	MISC
+	///////////////////////////////////////////////////////////////////////////////
+
+	"ReShade::BackBuffer": {
+		"prefix": "ReShade::BackBuffer",
+		"body": "ReShade::BackBuffer$0",
+		"description": "ReShade::BackBuffer"
+	},
+
+	"ReShade::PixelSize": {
+		"prefix": "ReShade::PixelSize",
+		"body": "ReShade::PixelSize$0",
+		"description": "ReShade::PixelSize"
+	},
+}
