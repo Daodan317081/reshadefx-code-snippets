@@ -84,7 +84,7 @@
 	"Texture": {
 		"prefix": "texture",
 		"body": [
-			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; Format = $6; };",
+			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; MipLevels = ${6:1}, Format = ${7|RGBA8,R8,R16F,R32F,RG8,RG16,RG16F,RG32F,RGBA16,RGBA16F,RGBA32F|}; };",
 			"$0"
 		],
 		"description": "texture"
@@ -93,7 +93,7 @@
 	"Sampler": {
 		"prefix": "sampler",
 		"body": [
-			"sampler2D ${1:name} { Texture = $2; };",
+			"sampler2D ${1:name} { Texture = $2; MipLODBias = ${3:0}};",
 			"$0"
 		],
 		"description": "sampler"
@@ -102,8 +102,8 @@
 	"Texture With Sampler": {
 		"prefix": "texture-with-sampler",
 		"body": [
-			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; Format = $6; };",
-			"sampler2D ${7:name} { Texture = $1; };",
+			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; MipLevels = ${6:1}, Format = ${7|RGBA8,R8,R16F,R32F,RG8,RG16,RG16F,RG32F,RGBA16,RGBA16F,RGBA32F|}; };",
+			"sampler2D ${8:name} { Texture = $1; MipLODBias = ${9:0}};",
 			"$0"
 		],
 		"description": "texture with sampler"
@@ -229,5 +229,5 @@
 		"prefix": "ReShade::PixelSize",
 		"body": "ReShade::PixelSize$0",
 		"description": "ReShade::PixelSize"
-	},
+	}
 }
