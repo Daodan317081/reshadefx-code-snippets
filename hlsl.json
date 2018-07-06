@@ -129,7 +129,7 @@
 	"texture2D": {
 		"prefix": "texture2D",
 		"body": [
-			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; MipLevels = ${6:1}, Format = ${7|RGBA8,R8,R16F,R32F,RG8,RG16,RG16F,RG32F,RGBA16,RGBA16F,RGBA32F|}; };",
+			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; MipLevels = ${6:1}; Format = ${7|RGBA8,R8,R16F,R32F,RG8,RG16,RG16F,RG32F,RGBA16,RGBA16F,RGBA32F|}; };",
 			"$0"
 		],
 		"description": "texture2D"
@@ -138,7 +138,7 @@
 	"sampler2D": {
 		"prefix": "sampler2D",
 		"body": [
-			"sampler2D ${1:name} { Texture = $2; MipLODBias = ${3:0}};",
+			"sampler2D ${1:name} { Texture = $2; MipLODBias = ${3:0}; };",
 			"$0"
 		],
 		"description": "sampler2D"
@@ -147,21 +147,51 @@
 	"texture2D+sampler2D": {
 		"prefix": "texture2D+sampler2D",
 		"body": [
-			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; MipLevels = ${6:1}, Format = ${7|RGBA8,R8,R16F,R32F,RG8,RG16,RG16F,RG32F,RGBA16,RGBA16F,RGBA32F|}; };",
-			"sampler2D ${8:name} { Texture = $1; MipLODBias = ${9:0}};",
+			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; MipLevels = ${6:1}; Format = ${7|RGBA8,R8,R16F,R32F,RG8,RG16,RG16F,RG32F,RGBA16,RGBA16F,RGBA32F|}; };",
+			"sampler2D ${8:name} { Texture = $1; MipLODBias = ${9:0}; };",
 			"$0"
 		],
 		"description": "texture2D and sampler2D"
 	},
 
-	"pixel-shader": {
-		"prefix": "pixel-shader",
+	"pixel-shader-float3": {
+		"prefix": "pixel-shader-float3",
 		"body": [
 			"float3 ${1:name}(float4 vpos : SV_Position, float2 texcoord : TexCoord) : SV_Target {",
 			"\t$0",
 			"}"
 		],
-		"description": "pixel shader body"
+		"description": "pixel shader"
+	},
+
+	"pixel-shader-void-1-target": {
+		"prefix": "pixel-shader-void-1-target",
+		"body": [
+			"void ${1:name}(float4 vpos : SV_Position, float2 texcoord : TexCoord, out ${2:float3} ${3:name} : SV_Target0) {",
+			"\t$0",
+			"}"
+		],
+		"description": "pixel shader; 1 target"
+	},
+
+	"pixel-shader-void-2-targets": {
+		"prefix": "pixel-shader-void-2-targets",
+		"body": [
+			"void ${1:name}(float4 vpos : SV_Position, float2 texcoord : TexCoord, out ${2:float3} ${3:name} : SV_Target0, out ${4:float3} ${5:name} : SV_Target1) : SV_Target {",
+			"\t$0",
+			"}"
+		],
+		"description": "pixel shader; 2 targets"
+	},
+
+	"pixel-shader-void-3-targets": {
+		"prefix": "pixel-shader-void-3-targets",
+		"body": [
+			"void ${1:name}(float4 vpos : SV_Position, float2 texcoord : TexCoord, out ${2:float3} ${3:name} : SV_Target0, out ${4:float3} ${5:name} : SV_Target1, out ${6:float3} ${7:name} : SV_Target2) : SV_Target {",
+			"\t$0",
+			"}"
+		],
+		"description": "pixel shader; 3 targets"
 	},
 
 	"technique": {
