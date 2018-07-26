@@ -1,19 +1,38 @@
 {
-	"uniform float": {
-		"prefix": "uniform float",
+
+	////////////////////////////////////////////////////////////
+	// UNIFORMS
+	///////////////////////////////////////////////////////////
+
+	// BOOL
+	"uniform bool": {
+		"prefix": "uniform bool",
 		"body": [
-			"uniform float ${2:name}<",
-			"\tui_type = \"drag\";",
+			"uniform bool ${1:name}<",
+			"\tui_label = \"$2\";",
 			"\t${3:ui_category = \"$4\";}",
-			"\tui_label = \"$5\";",
-			"\tui_min = ${6:0.0}; ui_max = ${7:1.0};",
-			"\tui_step = ${8:0.01};",
-			"> = ${9:1.0};",
+			"> = ${5|true,false|};",
 			"$0"
 		],
-		"description": "float uniform with drag control"
+		"description": "boolean uniform"
 	},
 
+	// COMBO
+	"uniform combo": {
+		"prefix": "uniform combo",
+		"body": [
+			"uniform int ${1:name}<",
+			"\tui_type = \"combo\";",
+			"\t${2:ui_category = \"$3\";}",
+			"\tui_label = \"$4\";",
+			"\tui_items = \"$5\";",
+			"> = ${6:0};",
+			"$0"
+		],
+		"description": "integer uniform with combo control"
+	},
+
+	// INT
 	"uniform int": {
 		"prefix": "uniform int",
 		"body": [
@@ -27,6 +46,67 @@
 			"$0"
 		],
 		"description": "integer uniform with drag control"
+	},
+	
+	"uniform int2": {
+		"prefix": "uniform int2",
+		"body": [
+			"uniform int2 ${2:name}<",
+			"\tui_type = \"drag\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\tui_min = ${6:0}; ui_max = ${7:1};",
+			"\tui_step = ${8:1};",
+			"> = int2(${9:0}, ${10:0});",
+			"$0"
+		],
+		"description": "int2 uniform with drag control"
+	},
+		
+	"uniform int3": {
+		"prefix": "uniform int3",
+		"body": [
+			"uniform int3 ${2:name}<",
+			"\tui_type = \"drag\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\tui_min = ${6:0}; ui_max = ${7:1};",
+			"\tui_step = ${8:1};",
+			"> = int3(${9:0}, ${10:0}, ${11:0});",
+			"$0"
+		],
+		"description": "int3 uniform with drag control"
+	},
+	
+	"Uniform int4": {
+		"prefix": "uniform int4",
+		"body": [
+			"uniform int4 ${2:name}<",
+			"\tui_type = \"drag\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\tui_min = ${6:0}; ui_max = ${7:1};",
+			"\tui_step = ${8:1};",
+			"> = int4(${9:0}, ${10:0}, ${11:0}, ${12:0});",
+			"$0"
+		],
+		"description": "int4 uniform with drag control"
+	},
+
+	// FLOAT
+	"uniform float": {
+		"prefix": "uniform float",
+		"body": [
+			"uniform float ${2:name}<",
+			"\tui_type = \"drag\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\tui_min = ${6:0.0}; ui_max = ${7:1.0};",
+			"\tui_step = ${8:0.01};",
+			"> = ${9:1.0};",
+			"$0"
+		],
+		"description": "float uniform with drag control"
 	},
 
 	"uniform float2": {
@@ -59,19 +139,6 @@
 		"description": "float3 uniform with drag control"
 	},
 
-	"uniform float3 color": {
-		"prefix": "uniform float3 color",
-		"body": [
-			"uniform float3 ${1:name}<",
-			"\tui_type = \"color\";",
-			"\t${2:ui_category = \"$3\";}",
-			"\tui_label = \"$4\";",
-			"> = float3(${5:1.0}, ${6:1.0}, ${7:1.0});",
-			"$0"
-		],
-		"description": "float3 uniform with color control"
-	},
-
 	"Uniform float4": {
 		"prefix": "uniform float4",
 		"body": [
@@ -85,6 +152,20 @@
 			"$0"
 		],
 		"description": "float4 uniform with drag control"
+	},
+	
+	// COLOR
+	"uniform float3 color": {
+		"prefix": "uniform float3 color",
+		"body": [
+			"uniform float3 ${1:name}<",
+			"\tui_type = \"color\";",
+			"\t${2:ui_category = \"$3\";}",
+			"\tui_label = \"$4\";",
+			"> = float3(${5:1.0}, ${6:1.0}, ${7:1.0});",
+			"$0"
+		],
+		"description": "float3 uniform with color control"
 	},
 
 	"uniform float4 color": {
@@ -100,31 +181,9 @@
 		"description": "float4 uniform with color control"
 	},
 
-	"uniform combo": {
-		"prefix": "uniform combo",
-		"body": [
-			"uniform int ${1:name}<",
-			"\tui_type = \"combo\";",
-			"\t${2:ui_category = \"$3\";}",
-			"\tui_label = \"$4\";",
-			"\tui_items = \"$5\";",
-			"> = ${6:0};",
-			"$0"
-		],
-		"description": "integer uniform with combo control"
-	},
-
-	"uniform bool": {
-		"prefix": "uniform bool",
-		"body": [
-			"uniform bool ${1:name}<",
-			"\tui_label = \"$2\";",
-			"\t${3:ui_category = \"$4\";}",
-			"> = ${5|true,false|};",
-			"$0"
-		],
-		"description": "boolean uniform"
-	},
+	////////////////////////////////////////////////////////////
+	// TEXTURES + SAMPLERS
+	///////////////////////////////////////////////////////////
 
 	"texture2D": {
 		"prefix": "texture2D",
@@ -153,6 +212,10 @@
 		],
 		"description": "texture2D and sampler2D"
 	},
+
+	////////////////////////////////////////////////////////////
+	// PIXEL SHADER
+	///////////////////////////////////////////////////////////
 
 	"pixel-shader-float3": {
 		"prefix": "pixel-shader-float3",
@@ -194,6 +257,10 @@
 		"description": "pixel shader; 3 targets"
 	},
 
+	////////////////////////////////////////////////////////////
+	// TECHNIQUES + PASSES + RENDER TARGETS
+	///////////////////////////////////////////////////////////
+
 	"technique": {
 		"prefix": "technique",
 		"body": [
@@ -224,6 +291,10 @@
 		"description": "RenderTarget"
 	},
 
+	////////////////////////////////////////////////////////////
+	// CONTROL FLOW
+	///////////////////////////////////////////////////////////
+
 	"for": {
 		"prefix": "for",
 		"body": [
@@ -245,6 +316,10 @@
 		],
 		"description": "nested for-loops"
 	},
+
+	////////////////////////////////////////////////////////////
+	// RESHADE INTRINSICS
+	///////////////////////////////////////////////////////////
 
 	"tex2D": {
 		"prefix": "tex2D",
