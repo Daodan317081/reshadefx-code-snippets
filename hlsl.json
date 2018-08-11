@@ -11,8 +11,7 @@
 			"uniform bool ${1:name}<",
 			"\tui_label = \"$2\";",
 			"\t${3:ui_category = \"$4\";}",
-			"> = ${5|true,false|};",
-			"$0"
+			"> = ${5|true,false|};$0"
 		],
 		"description": "boolean uniform"
 	},
@@ -26,8 +25,7 @@
 			"\t${2:ui_category = \"$3\";}",
 			"\tui_label = \"$4\";",
 			"\tui_items = \"$5\";",
-			"> = ${6:0};",
-			"$0"
+			"> = ${6:0};$0"
 		],
 		"description": "integer uniform with combo control"
 	},
@@ -42,8 +40,7 @@
 			"\tui_label = \"$5\";",
 			"\tui_min = ${6:0}; ui_max = ${7:1};",
 			"\tui_step = ${8:1};",
-			"> = ${9:1};",
-			"$0"
+			"> = ${9:1};$0"
 		],
 		"description": "integer uniform with drag control"
 	},
@@ -57,8 +54,7 @@
 			"\tui_label = \"$5\";",
 			"\tui_min = ${6:0}; ui_max = ${7:1};",
 			"\tui_step = ${8:1};",
-			"> = int2(${9:0}, ${10:0});",
-			"$0"
+			"> = int2(${9:0}, ${10:0});$0"
 		],
 		"description": "int2 uniform with drag control"
 	},
@@ -72,8 +68,7 @@
 			"\tui_label = \"$5\";",
 			"\tui_min = ${6:0}; ui_max = ${7:1};",
 			"\tui_step = ${8:1};",
-			"> = int3(${9:0}, ${10:0}, ${11:0});",
-			"$0"
+			"> = int3(${9:0}, ${10:0}, ${11:0});$0"
 		],
 		"description": "int3 uniform with drag control"
 	},
@@ -87,8 +82,7 @@
 			"\tui_label = \"$5\";",
 			"\tui_min = ${6:0}; ui_max = ${7:1};",
 			"\tui_step = ${8:1};",
-			"> = int4(${9:0}, ${10:0}, ${11:0}, ${12:0});",
-			"$0"
+			"> = int4(${9:0}, ${10:0}, ${11:0}, ${12:0});$0"
 		],
 		"description": "int4 uniform with drag control"
 	},
@@ -103,8 +97,7 @@
 			"\tui_label = \"$5\";",
 			"\tui_min = ${6:0.0}; ui_max = ${7:1.0};",
 			"\tui_step = ${8:0.01};",
-			"> = ${9:1.0};",
-			"$0"
+			"> = ${9:1.0};$0"
 		],
 		"description": "float uniform with drag control"
 	},
@@ -118,8 +111,7 @@
 			"\tui_label = \"$5\";",
 			"\tui_min = ${6:0.0}; ui_max = ${7:1.0};",
 			"\tui_step = ${8:0.01};",
-			"> = float2(${9:1.0}, ${10:1.0});",
-			"$0"
+			"> = float2(${9:1.0}, ${10:1.0});$0"
 		],
 		"description": "float2 uniform with drag control"
 	},
@@ -133,8 +125,7 @@
 			"\tui_label = \"$5\";",
 			"\tui_min = ${6:0.0}; ui_max = ${7:1.0};",
 			"\tui_step = ${8:0.01};",
-			"> = float3(${9:1.0}, ${10:1.0}, ${11:1.0});",
-			"$0"
+			"> = float3(${9:1.0}, ${10:1.0}, ${11:1.0});$0"
 		],
 		"description": "float3 uniform with drag control"
 	},
@@ -148,8 +139,7 @@
 			"\tui_label = \"$5\";",
 			"\tui_min = ${6:0.0}; ui_max = ${7:1.0};",
 			"\tui_step = ${8:0.01};",
-			"> = float4(${9:1.0}, ${10:1.0}, ${11:1.0}, ${12:1.0});",
-			"$0"
+			"> = float4(${9:1.0}, ${10:1.0}, ${11:1.0}, ${12:1.0});$0"
 		],
 		"description": "float4 uniform with drag control"
 	},
@@ -162,8 +152,7 @@
 			"\tui_type = \"color\";",
 			"\t${2:ui_category = \"$3\";}",
 			"\tui_label = \"$4\";",
-			"> = float3(${5:1.0}, ${6:1.0}, ${7:1.0});",
-			"$0"
+			"> = float3(${5:1.0}, ${6:1.0}, ${7:1.0});$0"
 		],
 		"description": "float3 uniform with color control"
 	},
@@ -175,8 +164,7 @@
 			"\tui_type = \"color\";",
 			"\t${2:ui_category = \"$3\";}",
 			"\tui_label = \"$4\";",
-			"> = float4(${5:1.0}, ${6:1.0}, ${7:1.0}, ${8:1.0});",
-			"$0"
+			"> = float4(${5:1.0}, ${6:1.0}, ${7:1.0}, ${8:1.0});$0"
 		],
 		"description": "float4 uniform with color control"
 	},
@@ -188,8 +176,7 @@
 	"texture2D": {
 		"prefix": "texture2D",
 		"body": [
-			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; MipLevels = ${6:1}; Format = ${7|RGBA8,R8,R16F,R32F,RG8,RG16,RG16F,RG32F,RGBA16,RGBA16F,RGBA32F|}; };",
-			"$0"
+			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; MipLevels = ${6:1}; Format = ${7|RGBA8,R8,R16F,R32F,RG8,RG16,RG16F,RG32F,RGBA16,RGBA16F,RGBA32F|}; };$0"
 		],
 		"description": "texture2D"
 	},
@@ -197,8 +184,7 @@
 	"sampler2D": {
 		"prefix": "sampler2D",
 		"body": [
-			"sampler2D ${1:name} { Texture = $2; MipLODBias = ${3:0}; };",
-			"$0"
+			"sampler2D ${1:name} { Texture = $2; MipLODBias = ${3:0}; };$0"
 		],
 		"description": "sampler2D"
 	},
@@ -207,8 +193,7 @@
 		"prefix": "texture2D+sampler2D",
 		"body": [
 			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; MipLevels = ${6:1}; Format = ${7|RGBA8,R8,R16F,R32F,RG8,RG16,RG16F,RG32F,RGBA16,RGBA16F,RGBA32F|}; };",
-			"sampler2D ${8:name} { Texture = $1; MipLODBias = ${9:0}; };",
-			"$0"
+			"sampler2D ${8:name} { Texture = $1; MipLODBias = ${9:0}; };$0"
 		],
 		"description": "texture2D and sampler2D"
 	},
@@ -278,7 +263,7 @@
 			"\tVertexShader = PostProcessVS;",
 			"\tPixelShader = $1;",
 			"\t${2:/* RenderTarget = BackBuffer */}",
-			"}\n$0"
+			"}$0"
 		],
 		"description": "pass"
 	},
@@ -323,49 +308,49 @@
 
 	"tex2D": {
 		"prefix": "tex2D",
-		"body": "tex2D(${1:sampler2D s}, ${2:float2 coords})${3:.rgb};\n$0",
+		"body": "tex2D(${1:sampler2D s}, ${2:float2 coords})${3:.rgb};$0",
 		"description": "Samples a 2D texture. <float4>"
 	},
 	
 	"tex2Dlod": {
 		"prefix": "tex2Dlod",
-		"body": "tex2Dlod(${1:sampler2D s}, float4(${2:float2 coords}, 0, ${3:LOD}))${4:.rgb};\n$0",
+		"body": "tex2Dlod(${1:sampler2D s}, float4(${2:float2 coords}, 0, ${3:LOD}))${4:.rgb};$0",
 		"description": "Samples a 2D texture with mipmaps. <float4>"
 	},
 	
 	"tex2Doffset": {
 		"prefix": "tex2Doffset",
-		"body": "tex2Doffset(${1:sampler2D s}, ${2:float2 coords}, ${3:int2 offset})${4:.rgb};\n$0",
+		"body": "tex2Doffset(${1:sampler2D s}, ${2:float2 coords}, ${3:int2 offset})${4:.rgb};$0",
 		"description": "Offsets the texture coordinates before sampling. <float4>"
 	},
 
 	"tex2Dlodoffset": {
 		"prefix": "tex2Dlodoffset",
-		"body": "tex2Dlodoffset(${1:sampler2D s}, float4(${2:float2 coords}, 0, ${3:LOD}), ${4:int2 offset})${5:.rgb};\n$0",
+		"body": "tex2Dlodoffset(${1:sampler2D s}, float4(${2:float2 coords}, 0, ${3:LOD}), ${4:int2 offset})${5:.rgb};$0",
 		"description": "Samples a 2D texture with mipmaps. Offsets the texture coordinates before sampling. <float4>"
 	},
 
 	"tex2Dfetch": {
 		"prefix": "tex2Dfetch",
-		"body": "tex2Dfetch(${1:sampler2D s}, int4(${2:int2 pos}, 0, ${3:int miplevel}))${4:.rgb};\n$0",
+		"body": "tex2Dfetch(${1:sampler2D s}, int4(${2:int2 pos}, 0, ${3:int miplevel}))${4:.rgb};$0",
 		"description": "Fetches a value from the texture directly without any sampling. <float4>"
 	},
 
 	"tex2Dgather": {
 		"prefix": "tex2Dgather",
-		"body": "tex2Dgather(${1:sampler2D s}, ${2:float2 coords}, ${3:int comp})${4:.rgb};\n$0",
+		"body": "tex2Dgather(${1:sampler2D s}, ${2:float2 coords}, ${3:int comp})${4:.rgb};$0",
 		"description": "Gathers the specified component of the four neighboring pixels and returns the result. <float4>"
 	},
 
 	"tex2Dgatheroffset": {
 		"prefix": "tex2Dgatheroffset",
-		"body": "tex2Dgatheroffset(${1:sampler2D s}, ${2:float2 coords}, ${3:int2 offset}, ${4:<nt comp})${5:.rgb};\n$0",
+		"body": "tex2Dgatheroffset(${1:sampler2D s}, ${2:float2 coords}, ${3:int2 offset}, ${4:<nt comp})${5:.rgb};$0",
 		"description": "Gathers the specified component of the four neighboring pixels and returns the result. Offsets the texture coordinates before sampling. <float4>"
 	},
 
 	"tex2Dsize": {
 		"prefix": "tex2Dsize",
-		"body": "tex2Dsize(${1:sampler2D s}, ${2:int lod});\n$0",
+		"body": "tex2Dsize(${1:sampler2D s}, ${2:int lod});$0",
 		"description": "Returns the size of a texture. <int2>"
 	},
 
