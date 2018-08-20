@@ -11,7 +11,8 @@
 			"uniform bool ${1:name}<",
 			"\tui_label = \"$2\";",
 			"\t${3:ui_category = \"$4\";}",
-			"> = ${5|true,false|};$0"
+			"\t${5:ui_tooltip = \"$6\";}",
+			"> = ${7|true,false|};$0"
 		],
 		"description": "boolean uniform"
 	},
@@ -24,8 +25,9 @@
 			"\tui_type = \"combo\";",
 			"\t${2:ui_category = \"$3\";}",
 			"\tui_label = \"$4\";",
-			"\tui_items = \"$5\";",
-			"> = ${6:0};$0"
+			"\t${5:ui_tooltip = \"$6\";}",
+			"\tui_items = \"$7\";",
+			"> = ${8:0};$0"
 		],
 		"description": "integer uniform with combo control"
 	},
@@ -38,9 +40,10 @@
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
-			"\tui_min = ${6:0}; ui_max = ${7:1};",
-			"\tui_step = ${8:1};",
-			"> = ${9:1};$0"
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${7:0}; ui_max = ${8:1};",
+			"\tui_step = ${9:1};",
+			"> = ${10:1};$0"
 		],
 		"description": "integer uniform with drag control"
 	},
@@ -52,9 +55,10 @@
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
-			"\tui_min = ${6:0}; ui_max = ${7:1};",
-			"\tui_step = ${8:1};",
-			"> = int2(${9:0}, ${10:0});$0"
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${8:0}; ui_max = ${9:1};",
+			"\tui_step = ${10:1};",
+			"> = int2(${11:0}, ${12:0});$0"
 		],
 		"description": "int2 uniform with drag control"
 	},
@@ -66,9 +70,10 @@
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
-			"\tui_min = ${6:0}; ui_max = ${7:1};",
-			"\tui_step = ${8:1};",
-			"> = int3(${9:0}, ${10:0}, ${11:0});$0"
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${8:0}; ui_max = ${9:1};",
+			"\tui_step = ${10:1};",
+			"> = int3(${11:0}, ${12:0}, ${13:0});$0"
 		],
 		"description": "int3 uniform with drag control"
 	},
@@ -80,9 +85,10 @@
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
-			"\tui_min = ${6:0}; ui_max = ${7:1};",
-			"\tui_step = ${8:1};",
-			"> = int4(${9:0}, ${10:0}, ${11:0}, ${12:0});$0"
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${8:0}; ui_max = ${9:1};",
+			"\tui_step = ${10:1};",
+			"> = int4(${11:0}, ${12:0}, ${13:0}, ${14:0});$0"
 		],
 		"description": "int4 uniform with drag control"
 	},
@@ -95,9 +101,10 @@
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
-			"\tui_min = ${6:0.0}; ui_max = ${7:1.0};",
-			"\tui_step = ${8:0.01};",
-			"> = ${9:1.0};$0"
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${8:0.0}; ui_max = ${9:1.0};",
+			"\tui_step = ${10:0.01};",
+			"> = ${11:1.0};$0"
 		],
 		"description": "float uniform with drag control"
 	},
@@ -109,9 +116,10 @@
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
-			"\tui_min = ${6:0.0}; ui_max = ${7:1.0};",
-			"\tui_step = ${8:0.01};",
-			"> = float2(${9:1.0}, ${10:1.0});$0"
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${8:0.0}; ui_max = ${9:1.0};",
+			"\tui_step = ${10:0.01};",
+			"> = float2(${11:1.0}, ${12:1.0});$0"
 		],
 		"description": "float2 uniform with drag control"
 	},
@@ -123,9 +131,10 @@
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
-			"\tui_min = ${6:0.0}; ui_max = ${7:1.0};",
-			"\tui_step = ${8:0.01};",
-			"> = float3(${9:1.0}, ${10:1.0}, ${11:1.0});$0"
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${8:0.0}; ui_max = ${9:1.0};",
+			"\tui_step = ${10:0.01};",
+			"> = float3(${11:1.0}, ${12:1.0}, ${13:1.0});$0"
 		],
 		"description": "float3 uniform with drag control"
 	},
@@ -137,9 +146,10 @@
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
-			"\tui_min = ${6:0.0}; ui_max = ${7:1.0};",
-			"\tui_step = ${8:0.01};",
-			"> = float4(${9:1.0}, ${10:1.0}, ${11:1.0}, ${12:1.0});$0"
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${8:0.0}; ui_max = ${9:1.0};",
+			"\tui_step = ${10:0.01};",
+			"> = float4(${11:1.0}, ${12:1.0}, ${13:1.0}, ${14:1.0});$0"
 		],
 		"description": "float4 uniform with drag control"
 	},
@@ -152,7 +162,8 @@
 			"\tui_type = \"color\";",
 			"\t${2:ui_category = \"$3\";}",
 			"\tui_label = \"$4\";",
-			"> = float3(${5:1.0}, ${6:1.0}, ${7:1.0});$0"
+			"\t${5:ui_tooltip = \"$6\";}",
+			"> = float3(${7:1.0}, ${8:1.0}, ${9:1.0});$0"
 		],
 		"description": "float3 uniform with color control"
 	},
@@ -164,7 +175,8 @@
 			"\tui_type = \"color\";",
 			"\t${2:ui_category = \"$3\";}",
 			"\tui_label = \"$4\";",
-			"> = float4(${5:1.0}, ${6:1.0}, ${7:1.0}, ${8:1.0});$0"
+			"\t${5:ui_tooltip = \"$6\";}",
+			"> = float4(${7:1.0}, ${8:1.0}, ${9:1.0}, ${10:1.0});$0"
 		],
 		"description": "float4 uniform with color control"
 	},
