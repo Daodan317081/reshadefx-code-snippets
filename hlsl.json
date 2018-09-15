@@ -8,7 +8,7 @@
 	"uniform bool": {
 		"prefix": "uniform bool",
 		"body": [
-			"uniform bool ${1:name}<",
+			"uniform bool ${1:name} <",
 			"\tui_label = \"$2\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\t${5:ui_tooltip = \"$6\";}",
@@ -21,7 +21,7 @@
 	"uniform combo": {
 		"prefix": "uniform combo",
 		"body": [
-			"uniform int ${1:name}<",
+			"uniform int ${1:name} <",
 			"\tui_type = \"combo\";",
 			"\t${2:ui_category = \"$3\";}",
 			"\tui_label = \"$4\";",
@@ -36,7 +36,7 @@
 	"uniform int": {
 		"prefix": "uniform int",
 		"body": [
-			"uniform int ${2:name}<",
+			"uniform int ${2:name} <",
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
@@ -51,7 +51,7 @@
 	"uniform int2": {
 		"prefix": "uniform int2",
 		"body": [
-			"uniform int2 ${2:name}<",
+			"uniform int2 ${2:name} <",
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
@@ -66,7 +66,7 @@
 	"uniform int3": {
 		"prefix": "uniform int3",
 		"body": [
-			"uniform int3 ${2:name}<",
+			"uniform int3 ${2:name} <",
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
@@ -81,7 +81,7 @@
 	"Uniform int4": {
 		"prefix": "uniform int4",
 		"body": [
-			"uniform int4 ${2:name}<",
+			"uniform int4 ${2:name} <",
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
@@ -97,7 +97,7 @@
 	"uniform float": {
 		"prefix": "uniform float",
 		"body": [
-			"uniform float ${2:name}<",
+			"uniform float ${2:name} <",
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
@@ -112,7 +112,7 @@
 	"uniform float2": {
 		"prefix": "uniform float2",
 		"body": [
-			"uniform float2 ${2:name}<",
+			"uniform float2 ${2:name} <",
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
@@ -127,7 +127,7 @@
 	"uniform float3": {
 		"prefix": "uniform float3",
 		"body": [
-			"uniform float3 ${2:name}<",
+			"uniform float3 ${2:name} <",
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
@@ -142,7 +142,7 @@
 	"Uniform float4": {
 		"prefix": "uniform float4",
 		"body": [
-			"uniform float4 ${2:name}<",
+			"uniform float4 ${2:name} <",
 			"\tui_type = \"drag\";",
 			"\t${3:ui_category = \"$4\";}",
 			"\tui_label = \"$5\";",
@@ -158,7 +158,7 @@
 	"uniform float3 color": {
 		"prefix": "uniform float3 color",
 		"body": [
-			"uniform float3 ${1:name}<",
+			"uniform float3 ${1:name} <",
 			"\tui_type = \"color\";",
 			"\t${2:ui_category = \"$3\";}",
 			"\tui_label = \"$4\";",
@@ -171,7 +171,7 @@
 	"uniform float4 color": {
 		"prefix": "uniform float4 color",
 		"body": [
-			"uniform float4 ${1:name}<",
+			"uniform float4 ${1:name} <",
 			"\tui_type = \"color\";",
 			"\t${2:ui_category = \"$3\";}",
 			"\tui_label = \"$4\";",
