@@ -9,10 +9,11 @@
 		"prefix": "uniform bool",
 		"body": [
 			"uniform bool ${1:name} <",
-			"\tui_label = \"$2\";",
-			"\t${3:ui_category = \"$4\";}",
-			"\t${5:ui_tooltip = \"$6\";}",
-			"> = ${7|true,false|};$0"
+			"\tui_type = \"${2|combo,radio|}\";",
+			"\tui_label = \"$3\";",
+			"\t${4:ui_category = \"$5\";}",
+			"\t${6:ui_tooltip = \"$7\";}",
+			"> = ${8|true,false|};$0"
 		],
 		"description": "boolean uniform"
 	},
@@ -37,60 +38,60 @@
 		"prefix": "uniform int",
 		"body": [
 			"uniform int ${1:name} <",
-			"\tui_type = \"drag\";",
-			"\t${2:ui_category = \"$3\";}",
-			"\tui_label = \"$4\";",
-			"\t${5:ui_tooltip = \"$6\";}",
-			"\tui_min = ${7:0}; ui_max = ${8:1};",
-			"\tui_step = ${9:1};",
-			"> = ${10:1};$0"
+			"\tui_type = \"${2|drag,slider,input|}\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${8:0}; ui_max = ${9:1};",
+			"\tui_step = ${10:1};",
+			"> = ${11:1};$0"
 		],
-		"description": "integer uniform with drag control"
+		"description": "integer uniform with drag, slider or input control"
 	},
 	
 	"uniform int2": {
 		"prefix": "uniform int2",
 		"body": [
 			"uniform int2 ${1:name} <",
-			"\tui_type = \"drag\";",
-			"\t${2:ui_category = \"$3\";}",
-			"\tui_label = \"$4\";",
-			"\t${5:ui_tooltip = \"$6\";}",
-			"\tui_min = ${7:0}; ui_max = ${8:1};",
-			"\tui_step = ${9:1};",
-			"> = int2(${10:0}, ${11:0});$0"
+			"\tui_type = \"${2|drag,slider,input|}\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${8:0}; ui_max = ${9:1};",
+			"\tui_step = ${10:1};",
+			"> = int2(${11:0}, ${12:0});$0"
 		],
-		"description": "int2 uniform with drag control"
+		"description": "int2 uniform with drag, slider or input control"
 	},
 		
 	"uniform int3": {
 		"prefix": "uniform int3",
 		"body": [
 			"uniform int3 ${1:name} <",
-			"\tui_type = \"drag\";",
-			"\t${2:ui_category = \"$3\";}",
-			"\tui_label = \"$4\";",
-			"\t${5:ui_tooltip = \"$6\";}",
-			"\tui_min = ${7:0}; ui_max = ${8:1};",
-			"\tui_step = ${9:1};",
-			"> = int3(${10:0}, ${11:0}, ${12:0});$0"
+			"\tui_type = \"${2|drag,slider,input|}\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${8:0}; ui_max = ${9:1};",
+			"\tui_step = ${10:1};",
+			"> = int3(${11:0}, ${12:0}, ${13:0});$0"
 		],
-		"description": "int3 uniform with drag control"
+		"description": "int3 uniform with drag, slider or input control"
 	},
 	
 	"Uniform int4": {
 		"prefix": "uniform int4",
 		"body": [
 			"uniform int4 ${1:name} <",
-			"\tui_type = \"drag\";",
-			"\t${2:ui_category = \"$3\";}",
-			"\tui_label = \"$4\";",
-			"\t${5:ui_tooltip = \"$6\";}",
-			"\tui_min = ${7:0}; ui_max = ${8:1};",
-			"\tui_step = ${9:1};",
-			"> = int4(${10:0}, ${11:0}, ${12:0}, ${13:0});$0"
+			"\tui_type = \"${2|drag,slider,input|}\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${8:0}; ui_max = ${9:1};",
+			"\tui_step = ${10:1};",
+			"> = int4(${11:0}, ${12:0}, ${13:0}, ${14:0});$0"
 		],
-		"description": "int4 uniform with drag control"
+		"description": "int4 uniform with drag, slider or input control"
 	},
 
 	// FLOAT
@@ -98,60 +99,60 @@
 		"prefix": "uniform float",
 		"body": [
 			"uniform float ${1:name} <",
-			"\tui_type = \"drag\";",
-			"\t${2:ui_category = \"$3\";}",
-			"\tui_label = \"$4\";",
-			"\t${5:ui_tooltip = \"$6\";}",
-			"\tui_min = ${7:0.0}; ui_max = ${8:1.0};",
-			"\tui_step = ${9:0.01};",
-			"> = ${10:1.0};$0"
+			"\tui_type = \"${2|drag,slider,input|}\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${8:0.0}; ui_max = ${9:1.0};",
+			"\tui_step = ${10:0.01};",
+			"> = ${11:1.0};$0"
 		],
-		"description": "float uniform with drag control"
+		"description": "float uniform with drag, slider or input control"
 	},
 
 	"uniform float2": {
 		"prefix": "uniform float2",
 		"body": [
 			"uniform float2 ${1:name} <",
-			"\tui_type = \"drag\";",
-			"\t${2:ui_category = \"$3\";}",
-			"\tui_label = \"$4\";",
-			"\t${5:ui_tooltip = \"$6\";}",
-			"\tui_min = ${7:0.0}; ui_max = ${8:1.0};",
-			"\tui_step = ${9:0.01};",
-			"> = float2(${10:1.0}, ${11:1.0});$0"
+			"\tui_type = \"${2|drag,slider,input|}\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${8:0.0}; ui_max = ${9:1.0};",
+			"\tui_step = ${10:0.01};",
+			"> = float2(${11:1.0}, ${12:1.0});$0"
 		],
-		"description": "float2 uniform with drag control"
+		"description": "float2 uniform with drag, slider or input control"
 	},
 
 	"uniform float3": {
 		"prefix": "uniform float3",
 		"body": [
 			"uniform float3 ${1:name} <",
-			"\tui_type = \"drag\";",
-			"\t${2:ui_category = \"$3\";}",
-			"\tui_label = \"$4\";",
-			"\t${5:ui_tooltip = \"$6\";}",
-			"\tui_min = ${7:0.0}; ui_max = ${8:1.0};",
-			"\tui_step = ${9:0.01};",
-			"> = float3(${10:1.0}, ${11:1.0}, ${12:1.0});$0"
+			"\tui_type = \"${2|drag,slider,input|}\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${8:0.0}; ui_max = ${9:1.0};",
+			"\tui_step = ${10:0.01};",
+			"> = float3(${11:1.0}, ${12:1.0}, ${13:1.0});$0"
 		],
-		"description": "float3 uniform with drag control"
+		"description": "float3 uniform with drag, slider or input control"
 	},
 
 	"Uniform float4": {
 		"prefix": "uniform float4",
 		"body": [
 			"uniform float4 ${1:name} <",
-			"\tui_type = \"drag\";",
-			"\t${2:ui_category = \"$3\";}",
-			"\tui_label = \"$4\";",
-			"\t${5:ui_tooltip = \"$6\";}",
-			"\tui_min = ${7:0.0}; ui_max = ${8:1.0};",
-			"\tui_step = ${9:0.01};",
-			"> = float4(${10:1.0}, ${11:1.0}, ${12:1.0}, ${13:1.0});$0"
+			"\tui_type = \"${2|drag,slider,input|}\";",
+			"\t${3:ui_category = \"$4\";}",
+			"\tui_label = \"$5\";",
+			"\t${6:ui_tooltip = \"$7\";}",
+			"\tui_min = ${8:0.0}; ui_max = ${9:1.0};",
+			"\tui_step = ${10:0.01};",
+			"> = float4(${11:1.0}, ${12:1.0}, ${13:1.0}, ${14:1.0});$0"
 		],
-		"description": "float4 uniform with drag control"
+		"description": "float4 uniform with drag, slider or input control"
 	},
 	
 	// COLOR
@@ -180,6 +181,89 @@
 		],
 		"description": "float4 uniform with color control"
 	},
+	
+	// MISC
+	"uniform float frametime": {
+		"prefix": "uniform float frametime",
+		"body": [
+			"uniform float frametime < source = \"frametime\"; >;"
+		],
+		"description": "Time in milliseconds it took for the last frame to complete."
+	},
+
+	"uniform int framecount": {
+		"prefix": "uniform int framecount",
+		"body": [
+			"uniform int framecount < source = \"framecount\"; >;"
+		],
+		"description": "Total amount of frames since the game started."
+	},
+
+	"uniform float4 date": {
+		"prefix": "uniform float4 date",
+		"body": [
+			"uniform float4 date < source = \"date\"; >;"			
+		],
+		"description": "float4(year, month (1 - 12), day of month (1 - 31), time in seconds)"
+	},
+
+	"uniform float timer": {
+		"prefix": "uniform float timer",
+		"body": [
+			"uniform float timer < source = \"timer\"; >;"			
+		],
+		"description": "Timer counting time in milliseconds since game start."
+	},
+
+	"uniform float2 pingpong": {
+		"prefix": "uniform float2 pingpong",
+		"body": [
+			"uniform float2 pingpong < source = \"pingpong\"; min = ${1:0}; max = ${2:9}; step = ${3:1}; >;"			
+		],
+		"description": "Counter that counts up and down between min and max using step as increase value. The second component is either +1 or -1 depending on the direction it currently goes."
+	},
+	
+	"uniform int random": {
+		"prefix": "uniform int random",
+		"body": [
+			"uniform int random < source = \"random\"; min = ${1:0}; max = ${2:10}; >;"			
+		],
+		"description": "Gets a new random value between min and max every pass."
+	},
+	
+	"uniform bool keydown": {
+		"prefix": "uniform bool keydown",
+		"body": [
+			"uniform bool keydown < source = \"key\"; keycode = ${1:0x20}; mode = \"${2|press,toggle|}\"; >;"			
+		],
+		"description": "True if specified keycode (in this case the spacebar) is pressed and false otherwise. If mode is set to \"press\" the value is true only in the frame the key was initially held down. If mode is set to \"toggle\" the value stays true until the key is pressed a second time."
+	},
+	
+	"uniform bool buttondown": {
+		"prefix": "uniform bool buttondown",
+		"body": [
+			"uniform bool buttondown < source = \"mousebutton\"; keycode = ${1|0,1,2,3,4|}; mode = \"${2|press,toggle|}\"; >;"			
+		],
+		"description": "True if specified mouse button (0 - 4) is pressed and false otherwise. If mode is set to \"press\" the value is true only in the frame the key was initially held down. If mode is set to \"toggle\" the value stays true until the key is pressed a second time."
+	},
+	
+	"uniform float2 mousepoint": {
+		"prefix": "uniform float2 mousepoint",
+		"body": [
+			"uniform float2 mousepoint < source = \"mousepoint\"; >;"			
+		],
+		"description": "Gets the position of the mouse cursor in screen coordinates."
+	},
+	
+	"uniform float2 mousedelta": {
+		"prefix": "uniform float2 mousedelta",
+		"body": [
+			"uniform float2 mousedelta < source = \"mousedelta\"; >;"			
+		],
+		"description": "Gets the movement of the mouse cursor in screen coordinates."
+	},
+
+
 
 	////////////////////////////////////////////////////////////
 	// TEXTURES + SAMPLERS
@@ -188,7 +272,7 @@
 	"texture2D": {
 		"prefix": "texture2D",
 		"body": [
-			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; MipLevels = ${6:1}; Format = ${7|RGBA8,R8,R16F,R32F,RG8,RG16,RG16F,RG32F,RGBA16,RGBA16F,RGBA32F|}; };$0"
+			"texture2D ${1:name} ${2:< source = $3; >} { Width = ${4:BUFFER_WIDTH}; Height = ${5:BUFFER_HEIGHT}; MipLevels = ${6:1}; Format = ${7|RGBA8,R8,R16F,R32F,RG8,RG16,RG16F,RG32F,RGBA16,RGBA16F,RGBA32F|}; };$0"
 		],
 		"description": "texture2D"
 	},
@@ -204,7 +288,7 @@
 	"texture2D+sampler2D": {
 		"prefix": "texture2D+sampler2D",
 		"body": [
-			"texture2D ${1:name} ${2:< source = $3; >} { Width = $4; Height = $5; MipLevels = ${6:1}; Format = ${7|RGBA8,R8,R16F,R32F,RG8,RG16,RG16F,RG32F,RGBA16,RGBA16F,RGBA32F|}; };",
+			"texture2D ${1:name} ${2:< source = $3; >} { Width = ${4:BUFFER_WIDTH}; Height = ${5:BUFFER_HEIGHT}; MipLevels = ${6:1}; Format = ${7|RGBA8,R8,R16F,R32F,RG8,RG16,RG16F,RG32F,RGBA16,RGBA16F,RGBA32F|}; };",
 			"sampler2D ${8:name} { Texture = $1; MipLODBias = ${9:0}; };$0"
 		],
 		"description": "texture2D and sampler2D"
