@@ -321,7 +321,7 @@
 	"pixel-shader-void-2-targets": {
 		"prefix": "pixel-shader-void-2-targets",
 		"body": [
-			"void ${1:name}(float4 vpos : SV_Position, float2 texcoord : TexCoord, out ${2:float3} ${3:name} : SV_Target0, out ${4:float3} ${5:name} : SV_Target1) : SV_Target {",
+			"void ${1:name}(float4 vpos : SV_Position, float2 texcoord : TexCoord, out ${2:float3} ${3:name} : SV_Target0, out ${4:float3} ${5:name} : SV_Target1) {",
 			"\t$0",
 			"}"
 		],
@@ -331,7 +331,7 @@
 	"pixel-shader-void-3-targets": {
 		"prefix": "pixel-shader-void-3-targets",
 		"body": [
-			"void ${1:name}(float4 vpos : SV_Position, float2 texcoord : TexCoord, out ${2:float3} ${3:name} : SV_Target0, out ${4:float3} ${5:name} : SV_Target1, out ${6:float3} ${7:name} : SV_Target2) : SV_Target {",
+			"void ${1:name}(float4 vpos : SV_Position, float2 texcoord : TexCoord, out ${2:float3} ${3:name} : SV_Target0, out ${4:float3} ${5:name} : SV_Target1, out ${6:float3} ${7:name} : SV_Target2) {",
 			"\t$0",
 			"}"
 		],
